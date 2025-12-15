@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+.shop-header {
+    background: #0066cc;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.shop-header input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* SẢN PHẨM */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #eee;
+}
+
+.product:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.product h3 {
+    font-size: 14px;
+    padding: 8px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.price {
+    color: #ff6600;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.product button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    width: calc(100% - 16px);
+    margin: 8px;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.product button:hover {
+    opacity: 0.9;
+}
+
+/* GIỎ HÀNG */
+.cart-box {
+    background: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.cart-box h2 {
+    color: #ff6600;
+}
+
+.cart-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-box li {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.cart-box button {
+    background: #ff424e;
+    border: none;
+    color: white;
+    padding: 2px 6px;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .product img {
+        height: 140px;
+    }
+
+    .product h3 {
+        font-size: 12px;
+        height: 30px;
+    }
+
+    .product button {
+        padding: 4px;
+        font-size: 12px;
+    }
+
+    .shop-header input {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}
